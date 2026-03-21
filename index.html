@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafra OS</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="image/logo.png">
+</head>
+
+<body>
+
+    <!-- Dynamic Background -->
+    <div class="bg-layer map-bg"></div>
+    <div class="bg-layer grid-bg"></div>
+    <div class="bg-overlay"></div>
+
+    <div class="app-container">
+
+        <!-- Global Header -->
+        <header class="global-header">
+            <div class="logo-container">
+                <img src="image/logo.png" alt="Kafra OS Logo" class="logo">
+                <div class="brand-info">
+                    <h1 class="brand-title">Kafra OS</h1>
+                    <div class="system-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">SYSTEM ONLINE</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <button class="nav-btn active" data-tab="worldboss">
+                    <span class="nav-label">WORLDBOSS</span>
+                </button>
+                <button class="nav-btn" data-tab="reflection">
+                    <span class="nav-label">REFLECTION</span>
+                </button>
+                <button class="nav-btn" data-tab="battlefield">
+                    <span class="nav-label">BATTLEFIELD</span>
+                </button>
+            </nav>
+
+            <div class="header-time">
+                <span id="system-time">--:--:--</span>
+                <script>document.getElementById('system-time').textContent = new Date().toLocaleTimeString('en-US', { hour12: false });</script>
+                <span class="timezone-indicator">ICT</span>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- World Boss Tab -->
+            <section id="tab-worldboss" class="tab-pane active">
+                <div class="section-header">
+                    <div class="title-area">
+                        <div class="header-main-flex">
+                            <h2><img src="image/NoScrubs-Iris-Online.png" class="section-icon" alt="NoScrubs Icon"> WORLD BOSS INTELLIGENCE</h2>
+                        </div>
+                        <p class="section-subtitle">Live tracking of high-threat targets</p>
+                    </div>
+                    <div id="daily-briefing-container" class="briefing-top-right"></div>
+                </div>
+                <!-- Dynamic Grid container for JS -->
+                <div class="tracking-grid" id="worldboss-grid"></div>
+            </section>
+
+            <!-- Reflection Tab -->
+            <section id="tab-reflection" class="tab-pane">
+                <div class="section-header">
+                    <div class="title-area">
+                        <h2><img src="image/NoScrubs-Iris-Online.png" class="section-icon" alt="NoScrubs Icon"> REFLECTION DUNGEONS</h2>
+                        <p class="section-subtitle">Dimensional entity statistics and locations</p>
+                    </div>
+                </div>
+                <!-- Dynamic Grid container for JS -->
+                <div class="tracking-grid" id="reflection-grid"></div>
+            </section>
+
+            <!-- Battlefield Tab -->
+            <section id="tab-battlefield" class="tab-pane">
+                <div class="section-header bf-custom-header">
+                    <div class="title-area">
+                        <div class="header-main-flex">
+                            <h2><img src="image/NoScrubs-Iris-Online.png" class="section-icon" alt="NoScrubs Icon"> BATTLEFIELD SCHEDULE</h2>
+                        </div>
+                        <p class="section-subtitle">Daily conflict engagements protocol</p>
+                    </div>
+
+                    <!-- Interactive Reward Intel Toggle -->
+                    <div class="bf-intel-top-right">
+                        <button id="bf-intel-toggle" class="bf-intel-btn">
+                            <i class="fa-solid fa-medal"></i> REWARD INTEL
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Reward Intel Panel (Relative Flow - Pushes content down) -->
+                <div id="bf-intel-panel" class="bf-intel-dropdown">
+                    <div class="bf-reward-card">
+                        <div class="reward-icon"><img src="image/Crown-Battlefield.png" alt="Battlefield Crown"></div>
+                        <div class="reward-content">
+                            <h4>BATTLEFIELD MASTERY</h4>
+                            <p>The player with the most points at the end of the week wins a crown that increases their Battlefield Point gain, PvP Damage and All Defense for the next 7 days.</p>
+                        </div>
+                    </div>
+                    <div class="bf-reward-card">
+                        <div class="reward-icon"><img src="image/Crown-Colosseum.png" alt="Colosseum Crown"></div>
+                        <div class="reward-content">
+                            <h4>COLOSSEUM SUPREMACY</h4>
+                            <p>The player with the most Colosseum points at the end of the week wins a crown that increases their PvP Damage, Max HP and All Defense for the next 7 days.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Timeline container for JS -->
+                <div class="timeline-container" id="battlefield-timeline"></div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Boss Intelligence Modal -->
+    <div id="intel-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div id="modal-boss-name" class="modal-title"></div>
+            <div id="modal-map-container" class="modal-grid"></div>
+        </div>
+    </div>
+
+    <!-- Daily Boss Briefing Modal -->
+    <div id="briefing-modal" class="modal-overlay">
+        <div class="modal-content briefing-modal-content">
+            <button class="modal-close" id="briefing-modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <div class="modal-title"><div class="title-icon-box"><i class="fa-solid fa-bolt"></i></div> DAILY INTEL</div>
+                <div class="modal-subtitle">Resets Daily at 07:00 AM</div>
+            </div>
+            <div id="briefing-modal-list" class="briefing-detailed-list">
+                <!-- Data will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Data and App Logic -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
