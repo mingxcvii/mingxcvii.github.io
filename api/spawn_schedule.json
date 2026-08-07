@@ -1,0 +1,420 @@
+{
+  "bosses": {
+    "nereus": {
+      "name": "Nereus",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/nereus.png"
+    },
+    "livid": {
+      "name": "Livid",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/livid.png"
+    },
+    "ulric": {
+      "name": "Ulric",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/ulric.png"
+    },
+    "glaceon": {
+      "name": "Frigid Queen Glaceon",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/frigid.queen.glaceon.png"
+    },
+    "monoxia": {
+      "name": "Monoxia",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/monoxia.png"
+    },
+    "namazu": {
+      "name": "Namazu",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/namazu.png"
+    },
+    "sakun_tundro": {
+      "name": "Enraged Sakun & Enraged Tundro",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/enraged.sakun.png",
+      "subBosses": [
+        {
+          "name": "Enraged Sakun",
+          "imageUrl": "https://mingxcvii.github.io/image/enraged.sakun.png"
+        },
+        {
+          "name": "Enraged Tundro",
+          "imageUrl": "https://mingxcvii.github.io/image/enraged.tundro.png"
+        }
+      ]
+    },
+    "excavater": {
+      "name": "The Excavater",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/the.excavater.png"
+    },
+    "okeanos": {
+      "name": "Okeanos",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/okeanos.png"
+    },
+    "ishva": {
+      "name": "Ishva",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/ishva.png"
+    },
+    "hedorah": {
+      "name": "Hedorah",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/hedorah.png"
+    },
+    "sraclone": {
+      "name": "Sraclone",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/sraclone.png"
+    },
+    "cletus": {
+      "name": "Cruel Cletus",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/cruel.cletus.png"
+    },
+    "bael": {
+      "name": "Bael",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io"
+    },
+    "azjolor_rakdos": {
+      "name": "Pyre Lord Azjolor & Rakdos",
+      "color": 16711680,
+      "imageUrl": "https://mingxcvii.github.io/image/pyre.lord.azjolor.png",
+      "subBosses": [
+        {
+          "name": "Pyre Lord Azjolor",
+          "imageUrl": "https://mingxcvii.github.io/image/pyre.lord.azjolor.png"
+        },
+        {
+          "name": "Rakdos",
+          "imageUrl": "https://mingxcvii.github.io/image/rakdos.png"
+        }
+      ]
+    }
+  },
+  "schedule": [
+    {
+      "time": "00:00",
+      "days": {
+        "MON": [
+          "nereus"
+        ],
+        "TUE": [
+          "nereus"
+        ],
+        "WED": [
+          "nereus"
+        ],
+        "THU": [
+          "nereus"
+        ],
+        "FRI": [
+          "nereus"
+        ],
+        "SAT": [
+          "nereus"
+        ],
+        "SUN": [
+          "nereus"
+        ]
+      }
+    },
+    {
+      "time": "02:00",
+      "days": {
+        "MON": [
+          "livid"
+        ],
+        "TUE": [
+          "livid"
+        ],
+        "WED": [
+          "livid"
+        ],
+        "THU": [
+          "livid"
+        ],
+        "FRI": [
+          "livid"
+        ],
+        "SAT": [
+          "livid"
+        ],
+        "SUN": [
+          "livid"
+        ]
+      }
+    },
+    {
+      "time": "05:00",
+      "days": {
+        "SUN": [
+          "monoxia"
+        ]
+      }
+    },
+    {
+      "time": "06:00",
+      "days": {
+        "MON": [
+          "ulric"
+        ],
+        "TUE": [
+          "ulric"
+        ],
+        "WED": [
+          "ulric"
+        ],
+        "THU": [
+          "ulric"
+        ],
+        "FRI": [
+          "ulric"
+        ],
+        "SAT": [
+          "ulric"
+        ],
+        "SUN": [
+          "ulric"
+        ]
+      }
+    },
+    {
+      "time": "09:00",
+      "days": {
+        "MON": [
+          "cletus"
+        ],
+        "WED": [
+          "glaceon"
+        ],
+        "SUN": [
+          "bael",
+          "azjolor_rakdos"
+        ],
+        "FRI": [
+          "azjolor_rakdos"
+        ],
+        "SAT": [
+          "azjolor_rakdos"
+        ]
+      }
+    },
+    {
+      "time": "10:00",
+      "days": {
+        "MON": [
+          "nereus"
+        ],
+        "TUE": [
+          "nereus"
+        ],
+        "WED": [
+          "nereus"
+        ],
+        "THU": [
+          "nereus"
+        ],
+        "FRI": [
+          "nereus"
+        ],
+        "SAT": [
+          "nereus",
+          "glaceon"
+        ],
+        "SUN": [
+          "nereus"
+        ]
+      }
+    },
+    {
+      "time": "11:00",
+      "days": {
+        "SUN": [
+          "namazu"
+        ]
+      }
+    },
+    {
+      "time": "12:00",
+      "days": {
+        "MON": [
+          "sakun_tundro"
+        ],
+        "TUE": [
+          "sakun_tundro",
+          "namazu"
+        ],
+        "WED": [
+          "sakun_tundro"
+        ],
+        "THU": [
+          "sakun_tundro"
+        ],
+        "FRI": [
+          "sakun_tundro"
+        ],
+        "SAT": [
+          "sakun_tundro"
+        ],
+        "SUN": [
+          "sakun_tundro"
+        ]
+      }
+    },
+    {
+      "time": "13:00",
+      "days": {
+        "MON": [
+          "sraclone"
+        ],
+        "THU": [
+          "excavater"
+        ],
+        "SAT": [
+          "excavater"
+        ],
+        "SUN": [
+          "okeanos"
+        ]
+      }
+    },
+    {
+      "time": "14:00",
+      "days": {
+        "MON": [
+          "livid"
+        ],
+        "TUE": [
+          "livid"
+        ],
+        "WED": [
+          "livid",
+          "hedorah"
+        ],
+        "THU": [
+          "livid"
+        ],
+        "FRI": [
+          "livid",
+          "namazu"
+        ],
+        "SAT": [
+          "livid",
+          "ishva"
+        ],
+        "SUN": [
+          "livid"
+        ]
+      }
+    },
+    {
+      "time": "15:00",
+      "days": {
+        "MON": [
+          "azjolor_rakdos"
+        ],
+        "TUE": [
+          "azjolor_rakdos"
+        ],
+        "WED": [
+          "azjolor_rakdos"
+        ],
+        "THU": [
+          "azjolor_rakdos"
+        ],
+        "FRI": [
+          "azjolor_rakdos"
+        ],
+        "SAT": [
+          "azjolor_rakdos"
+        ],
+        "SUN": [
+          "azjolor_rakdos"
+        ]
+      }
+    },
+    {
+      "time": "16:00",
+      "days": {
+        "MON": [
+          "monoxia"
+        ],
+        "TUE": [
+          "ishva"
+        ],
+        "FRI": [
+          "hedorah"
+        ],
+        "SAT": [
+          "cletus"
+        ]
+      }
+    },
+    {
+      "time": "17:00",
+      "days": {
+        "WED": [
+          "okeanos"
+        ],
+        "THU": [
+          "sraclone"
+        ]
+      }
+    },
+    {
+      "time": "18:00",
+      "days": {
+        "MON": [
+          "ulric"
+        ],
+        "TUE": [
+          "ulric",
+          "excavater"
+        ],
+        "WED": [
+          "ulric",
+          "namazu"
+        ],
+        "THU": [
+          "ulric"
+        ],
+        "FRI": [
+          "ulric"
+        ],
+        "SAT": [
+          "ulric"
+        ],
+        "SUN": [
+          "ulric"
+        ]
+      }
+    },
+    {
+      "time": "20:00",
+      "days": {
+        "THU": [
+          "glaceon"
+        ]
+      }
+    },
+    {
+      "time": "21:00",
+      "days": {
+        "FRI": [
+          "azjolor_rakdos"
+        ],
+        "SAT": [
+          "azjolor_rakdos"
+        ],
+        "SUN": [
+          "azjolor_rakdos"
+        ]
+      }
+    }
+  ]
+}
